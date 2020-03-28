@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.container {
+  display: inline-block;
+  margin: 50px 40vw;
+  position: relative;
+  perspective: 1000;
+}
+
+.test {
+  width: 300px;
+  height: 300px;
+  background-color: lightblue;
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  padding: 50px;
+  box-shadow: 0 0 15px #aaa;
+}
+
+.container:hover .test {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.test-backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  width: 300px;
+  height: 300px;
+  background-color: #eee;
+  transition: all 0.5s ease-in-out;
+  padding: 50px;
+  box-shadow: 0 0 15px #aaa;
+}
+
+.container:hover .test-backside {
+  transform: rotateY(360deg);
+}
